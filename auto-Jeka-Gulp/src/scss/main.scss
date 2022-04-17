@@ -1,0 +1,18 @@
+// базовые подключения
+@import "../../node_modules/normalize-scss/sass/normalize";
+@include normalize(); 
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "setings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/whoweare";
+@import "./components/about";
+@import "./components/recording";
+@import "./components/gallery";
+@import "./components/feedback";
+@import "./components/services";
+@import "./components/conventus";
+@import "./components/footer";

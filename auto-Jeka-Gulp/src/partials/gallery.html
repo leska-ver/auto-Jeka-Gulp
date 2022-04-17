@@ -1,0 +1,60 @@
+<section class="gallery">
+  <div class="container gallery__container">
+    <div class="gallery__subtitle subtitle">
+      <img src="img/whoweare-icon.png" alt="icon">
+      GALLERY & LIVE STREAMS
+    </div>
+    <h3 class="gallery__title h3">Check out our hard workers</h3>
+    <div class="gallery__tabs js-tabs">
+      <ul class="gallery__list">
+        <li class="gallery__item">
+          <button class="gallery__button js-tabs-btn" data-path="gallery" aria-label="gallery">Gallery</button>
+        </li>
+        <li class="gallery__item">
+          <div class="gallery__on"></div><!--Зелённый-->
+          <div class="gallery__off gallery__off_1js"></div><!--Серый-->
+          <button class="gallery__button js-tabs-btn is-active" data-path="bay-1" aria-label="bay-1">Live stream: Bay 1</button>
+        </li>
+        <li class="gallery__item">
+          <div class="gallery__on"></div><!--Зелённый-->
+          <div class="gallery__off gallery__off_2js"></div><!--Серый-->
+          <button class="gallery__button js-tabs-btn" data-path="bay-2" aria-label="bay-2">Live stream: Bay 2</button>
+        </li>
+        <li class="gallery__item">
+          <div class="gallery__on"></div><!--Зелённый-->
+          <div class="gallery__off gallery__off_3js"></div><!--Серый-->
+          <button class="gallery__button js-tabs-btn" data-path="bay-3" aria-label="bay-3">Live stream: Bay 3</button>
+        </li>
+      </ul>
+      <div class="gallery__bay gallery__bay_padding tab-content" data-target="gallery">
+        <div class="gallery__bay-grid" id="list-js">
+          <img class="gallery__bay-img" src="img/gallery-1.jpg" alt="Фото-1">
+          <img class="gallery__bay-img" src="img/gallery-2.jpg" alt="Фото-2">
+          <img class="gallery__bay-img" src="img/gallery-3.jpg" alt="Фото-3">
+          <img class="gallery__bay-img" src="img/gallery-4.jpg" alt="Фото-4">
+          <img class="gallery__bay-img" src="img/gallery-5.jpg" alt="Фото-5">
+          <img class="gallery__bay-img" src="img/gallery-6.jpg" alt="Фото-6">
+          <img class="gallery__bay-img" src="img/gallery-10.jpg" alt="Фото-10">
+          <img class="gallery__bay-img" src="img/gallery-11.jpg" alt="Фото-11">
+          <img class="gallery__bay-img" src="img/gallery-12.jpg" alt="Фото-12">
+          <img class="gallery__bay-img" src="img/gallery-13.jpg" alt="Фото-13">
+        </div>
+        <button class="gallery__button-hide" id="list-button-js">Ещё...</button>
+      </div>
+      <div class="gallery__bay tab-content tab-content-active" data-target="bay-1">
+        <img class="gallery__bay-imgWidth" src="img/gallery-7.jpg" alt="Фото-7">              
+        <span class="gallery__span gallery__span_on-off-1js">Live</span>
+      </div>
+      <div class="gallery__bay gallery__bay_video tab-content" data-target="bay-2">
+        <!-- <img class="gallery__bay-imgWidth" src="img/gallery-8.jpg" alt="Фото-8"> -->
+        <iframe src="https://www.youtube.com/embed/rBMhcszHxsc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <span class="gallery__span gallery__span_on-off-2js">Live</span>
+      </div>
+      <div class="gallery__bay gallery__bay_video tab-content" data-target="bay-3">
+        <!-- <img class="gallery__bay-imgWidth" src="img/gallery-9.jpg" alt="Фото-9"> -->
+        <iframe src="https://www.youtube.com/embed/uOKgYcN__HY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <span class="gallery__span gallery__span_on-off-3js">Live</span>
+      </div>            
+    </div>
+  </div>
+</section>

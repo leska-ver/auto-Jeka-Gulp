@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Для поиска в сети--> 
+    <meta name="description" content="Рады видеть Вас на нашем сайте.">
+    <meta property="og:title" content="Услуги для автовладельцев">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="здесь ссылка на сайт">
+    <meta property="og:image" content="картинка для поисковиков">
+    <meta name="keywords" content="услуги, автосервис">
+    <!-- //Для поиска в сети-->     
+    <title>logoipsum</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="visually-hidden">Я для семантики</h1>
+      @include('partials/header.html')
+      <main>
+        @include('partials/whoweare.html')
+        @include('partials/about.html')
+        @include('partials/recording.html')
+        @include('partials/gallery.html')
+        @include('partials/feedback.html')
+        @include('partials/services.html')
+        @include('partials/conventus.html')
+      </main>
+      @include('partials/footer.html')
+    </div>  
+
+
+    <!--Аккордеон тоже самое и для бургера-->
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> полная библиотека-->
+    <!--<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>минифицированный библиотека-->
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> полная библиотека-->
+    <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>минифицированный библиотека-->
+    <!--Маска формы input-ов-->
+    <!-- <script src="js/inputmask.min.js"></script> -->
+    <!--Валидатор input-ов-->
+    <!-- <script src="js/just-validate.min.js"></script> -->
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Подключите API - Яндекс карта(ymap) -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <!--Кнопка для видео включатель/выключатель. зелённый круг-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Плагин для часов -->
+    <script>digitalClock();</script>
+
+
+    <!-- Мои -->
+    <script src="js/auto-Jeka.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/footer-modal.js"></script>
+  </body>
+</html>  

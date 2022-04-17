@@ -1,0 +1,301 @@
+@import "mixins/breakpoint.scss";
+
+/*** Форма регистрация recording-1440px***/
+.recording {
+  position: relative;
+  padding-bottom: 209px;
+  background-color: var(--color-tangaroa);
+
+  &::before {  
+    top: 0;
+    right: 0;  
+    background-image: url("../img/picture-transparent-1.png");  
+    background-position: top;
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 641px;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &::after {
+    bottom: 76px;
+    left: 0;
+    background-image: url("../img/picture-transparent-3.png");
+    background-position: bottom;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 351px;
+    padding: 130px 50px 0;
+  }
+
+  &__left {
+    margin-right: auto;
+    padding: 35px 57px 77px;  
+    background-color: var(--color-white);
+    z-index: 5;
+  }
+
+  &__h3 {
+    margin-bottom: 45px;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  /*---Телефон валидация и маска---*/
+  &__form {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(2, 225px);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 21px 17px;
+    margin-bottom: 21px;
+  }
+
+/*Для формы отправки*/
+.form__label {
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+}
+/* // Для формы отправки*/
+
+  &__input {
+    padding: 16px 27px 12px;
+    border: 1px solid transparent;
+    width: 100%;
+    background-color: var(--color-wildSand);    
+  }
+
+  &__input:focus {
+    outline: none;
+  }
+
+  &__form-label {
+    margin-bottom: 27px;
+  }
+
+  /***Стилазация фразы ошибки***/
+  &__label {/*общий*/
+    position: relative;
+  }
+
+.js-validate-error-label {
+  position: absolute;
+  top: -17px;
+  left: 3px;  
+}
+  /***Конец стилазация фразы ошибки***/
+
+  &__textarea {
+    padding: 15px 26px;
+    border: 1px solid transparent;
+    width: 100%;
+    height: 182px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-dustyGray);
+    background-color: var(--color-wildSand);
+    overflow: hidden;
+  }
+
+  &__textarea:focus {
+    outline: 1px solid var(--color-dustyGray);
+  }
+
+  &__button {
+    margin-left: auto;
+  
+    &:focus {
+      outline: 1px solid var(--color-tangaroa);
+    }
+
+    &:hover {
+      background-color: #d52828;
+    }
+
+    &:active {
+      background-color: #d00c0c;
+    }
+
+    & svg {
+      margin-left: 5px;
+    }
+  }
+
+  &__right {
+    padding: 137px 5px 137px 31px;
+  }
+
+  &__h3-white {
+    margin-bottom: 62px;
+    font-size: 30px;
+    line-height: 36px;
+    color: var(--color-white);
+    text-align: center;
+  }
+
+  &__h2 {  
+    margin: 0 0 63px;
+    font-size: 96px;
+    line-height: 56px;
+    color: var(--color-milanoRed);
+    text-align: center;
+  }
+
+  &__h4 {
+    color: var(--color-white);
+    text-align: center;
+  }
+}
+/*** // Форма регистрация recording-1440px***/
+
+
+
+/*** Форма регистрация recording-1024px***/
+@include desktop {
+  .recording {
+    padding-bottom: 97px;
+  
+    &::before, &::after {
+      width: 541px;
+      height: 350px;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &__container {
+      grid-template-columns: 1fr;
+      padding: 100px 45px 0;
+    }
+
+    &__left {
+      margin: 0 auto;
+      margin-bottom: 77px;
+      padding: 15px 30px 45px;
+      width: 585px;    
+    }
+
+    &__right {
+      padding: 0 30px;
+    }
+  } 
+}
+/*** // Форма регистрация recording-10240px***/
+
+
+
+/*** Форма регистрация recording-757px***/
+@include tablet {
+  .recording {
+    padding-bottom: 80px;
+  
+    &::before, &::after {
+      width: 479px;
+      height: 280px;
+    }
+
+    &__container {
+      padding: 70px 35px 0;
+    }
+
+    &__left {
+      margin-bottom: 50px;
+      padding: 4px 22px 50px;
+      width: 100%;
+    }
+
+    &__h3 {
+      margin-bottom: 25px;
+      line-height: 1;
+    }
+
+    &__block {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 21px 17px;
+      margin-bottom: 21px;
+    }
+
+    &__form-label {
+      margin-bottom: 28px;
+    }
+
+    &__right {
+      padding: 0 20px;
+    }
+  }
+}
+/*** // Форма регистрация recording-757px***/
+
+
+
+/*** Форма регистрация recording-434px***/
+@include mobile {
+  .recording {
+    padding-bottom: 40px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      width: 409px;
+      height: 210px;
+    }
+
+    &__container {
+      padding: 40px 20px 0;
+    }
+
+    &__left {
+      margin-bottom: 20px;
+      padding-bottom: 35px;
+    }
+
+    &__h3 {
+      text-align: start;
+    }
+
+    &__h3-white {
+      margin-bottom: 50px;
+      text-align: start;
+    }
+
+    &__h2 {
+      margin: 0 0 45px;
+      font-size: 76px;
+    } 
+    
+    &__h4 {
+      width: 156px;
+      margin: 0 auto;
+    }
+
+    &__button {
+      justify-content: center;
+      width: 100%;
+    }
+
+    &__button svg {
+      margin-left: auto;
+    }
+  }
+}
+/*** // Форма регистрация recording-434px***/

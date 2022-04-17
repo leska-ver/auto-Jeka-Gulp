@@ -1,0 +1,455 @@
+@import "mixins/breakpoint.scss";
+
+/*** Подвал footer-1440px***/
+.footer {
+  padding: 45px 0 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__top {
+    padding-bottom: 89px;
+  }
+
+  &__container_grid {
+    display: grid;
+    grid-template-columns: 232px 248px 248px;
+    justify-content: space-between;
+    padding: 0 88px 0 50px;
+  }
+
+  &__logo:focus {
+    outline: 2px solid var(--color-tangaroa);
+    outline-offset: 8px;
+  }
+
+  &__desc {
+    margin-bottom: 35px;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--color-tundora);
+  }
+
+  &__nav {
+    width: 275px;
+  }
+
+  &__list-icone {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item-icone {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__item-icone:not(:last-child) {
+    margin-right: 18px;
+  }
+
+  &__link-icone {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    outline: none;
+  }
+
+  &__link-icone svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    -webkit-transition: outline .4s ease-in-out;
+    -moz-transition: outline .4s ease-in-out;
+    -ms-transition: outline .4s ease-in-out;
+    -o-transition: outline .4s ease-in-out;
+    transition: outline .4s ease-in-out;
+  }
+
+  &__link-icone:focus svg, &__link-icone:hover svg {
+    outline: 1px solid var(--color-milanoRed);
+    outline-offset: 4px;
+  }
+
+  &__link-icone:active svg {
+    opacity: .5;
+  }
+
+  &__center-desc {
+    margin-top: 14.5px;
+    margin-bottom: 28px;
+    color: var(--color-tundora);
+  }
+
+  &__center-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__center-list {  
+    margin: 0;
+    padding: 0;
+  }
+
+  &__center-item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &__center-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--color-tundora);
+    cursor: pointer;
+    -webkit-transition: color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out;
+    -ms-transition: color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out;
+    transition: color .4s ease-in-out;
+  }
+
+  &__center-link:focus {
+    color: var(--color-white);
+    background-color: var(--color-milanoRed);
+    outline: none;
+  }
+
+  &__center-link:hover {
+    color: var(--color-milanoRed);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  &__center-link:active {
+    opacity: .7;
+  }
+
+  &__right {
+    margin-left: 47px;
+  }
+
+  &__right-desc {
+    margin-top: 14.5px;
+    margin-bottom: 28px;
+    color: var(--color-tundora);
+  }
+
+  &__right-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__right-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__right-link {
+    display: grid;
+    grid-template-columns: 16px 188px;
+    gap: 20px;
+    outline: none;
+  }
+
+  &__right-link svg {
+    display: block;
+    cursor: pointer;
+  }
+
+  &__right-link:focus svg path {
+    fill: var(--color-tangaroa);
+  }
+
+  &__right-span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-tundora);
+  }
+
+  &__bottom {
+    padding: 9px 0;
+    background-color: var(--color-tangaroa);
+  }
+
+  &__container_bottom {
+    padding: 0 19px;
+  }
+
+  &__bottom-desc {
+    font-size: 12.2px;
+    line-height: 18px;
+    color: var(--color-dustyGray);
+  }
+
+  &__bottom-span {
+    margin: auto 0;
+    font-size: 12.7px;
+    line-height: 18px;
+    color: var(--color-dustyGray);
+  }
+
+  /* Стили для модального окна - footer__modal */
+  &__overlay {  
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;  
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .5);
+    opacity: 0;
+    transition: .4s all;
+    z-index: 20;
+  }
+
+  &__modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    visibility: hidden;
+    padding: 30px;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);   
+    width: 700px;
+    text-align: center;
+    background-color: #fff;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: 0.3s all;
+    z-index: 30; /* Должен быть выше чем у подложки*/  
+  }
+
+  /* Стили для активных классов подложки и окна */
+  &__modal.active,
+  &__overlay.active{
+    visibility: visible;
+    opacity: 1;  
+  }
+
+  /* Стили для кнопки закрытия */
+  &__modal-cross {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 15px;
+    height: 15px;  
+    fill: #444;
+    cursor: pointer;
+  }
+
+  &__modal_width {
+    width: 450px;
+  }
+  /* // Стили для модального окна - footer__modal */
+
+  &__modal-title {
+    margin-top: 0;
+  }
+
+  &__map {
+    width: 100%; 
+    height: 400px;
+  }
+
+  &__modal-title_weight {
+    margin-top: 25px;
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+  /* Стили для Часов */
+  &__modal-clock {
+    display: grid;
+    grid-template-columns: 32px 15px 32px;
+    gap: 1px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 82px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  &__modal-block-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 0 auto;
+    margin-bottom: 2px;  
+    width: 162px;  
+  }
+
+  &__modal-date {
+    display: inline-block;
+    width: 25px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__modal-month, &__modal-weekly {
+    font-size: 18px;
+  }
+
+  &__modal-year {
+    margin: 0 auto;
+    padding: 2px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+/*** // Подвал footer-1440px***/
+
+
+
+/*** Подвал footer-1024px***/
+@include desktop {
+  .footer {
+    padding: 35px 0 0;
+  }
+
+  &__top {
+    padding-bottom: 70px;
+  }
+
+  &__container_grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: end;
+    gap: 50px;
+  }
+
+  &__item-icone:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link-icone:focus svg, &__link-icone:hover svg {
+    outline-offset: 2px;
+  }
+
+  &__right {
+    margin-left: 0;
+  }
+
+  &__right-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__right-link {
+    grid-template-columns: 16px 1fr;
+    gap: 10px;
+  }
+}
+/*** // Подвал footer-10240px***/
+
+
+
+/*** Подвал footer-757px***/
+@include tablet {
+  .footer {
+    padding: 30px 0 0;
+  }
+
+  &__container_grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__left {
+    width: 350px;
+  }
+
+  &__desc {
+    margin-bottom: 20px;
+  }  
+
+  &__center-block {
+    justify-content: start;
+  }
+
+  &__center-list:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__center-desc, &__right-desc {
+    margin-bottom: 20px;
+  }
+
+  &__container_bottom {
+    display: block;
+    justify-content: end;
+  }
+
+  &__bottom-desc {
+    margin-bottom: 25px;
+  }
+
+  &__bottom-span {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__modal {
+    padding: 20px;  
+    width: 400px;     
+  }
+
+  &__map {
+    height: 260px;
+  }
+}
+/*** // Подвал footer-757px***/
+
+
+
+/*** Подвал footer-434px***/
+@include mobile {
+  .footer {
+    padding: 15px 0 0;
+  }
+
+  &__center-desc, &__right-desc {
+    margin-bottom: 10px;
+  }
+
+  &__center-block {
+    display: block;
+  }
+
+  &__center-list {
+    display: flex;
+  }
+
+  &__center-list:not(:last-child) {
+    margin-right: 0;
+  }
+
+  &__center-item:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  &__bottom {
+    padding-bottom: 30px;
+  }
+
+  &__modal {
+    width: 100%;     
+  }
+
+  &__modal-clock {
+    font-size: 22px;
+  }
+
+  &__modal-title_weight {
+    margin: 25px auto;
+    padding: 2px;
+    width: 70%;    
+  }
+}
+/*** // Подвал footer-434px***/

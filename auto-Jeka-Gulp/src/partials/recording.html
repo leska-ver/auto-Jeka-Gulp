@@ -1,0 +1,46 @@
+<section class="recording">
+  <div class="container recording__container">
+    <div class="recording__left">
+      <h3 class="recording__h3 h3">Make an appointment</h3>
+      <div class="recording__form">
+        <form class="recording__form form" id="checkboxForm" action="mail.php" enctype="multipart/form-data" method="POST">
+          <input type="hidden" name="admin_email[]" value="darki@yandex.ru">
+          <input type="hidden" name="form_subject" value="Тема письма">
+          <div class="recording__block">
+            <label class="recording__label">
+              <input class="recording__input" type="text" name="name" placeholder="Name" data-validate-field="name"
+                maxlength="10">
+            </label>
+            <label class="recording__label">
+              <input class="recording__input" type="email" name="email" placeholder="Email" data-validate-field="email" maxlength="35">
+            </label>
+            <label class="recording__label">
+              <input class="recording__input" type="tel" name="tel" placeholder="Phone Number" data-validate-field="tel"
+                data-validate-rules="phone">
+            </label>
+            <label class="recording__label">
+              <input class="recording__input" type="text" name="text" placeholder="Select Service" maxlength="50">
+            </label>                  
+          </div>
+          <div class="recording__form-label">
+            <label class="recording__label">                  
+              <textarea class="recording__textarea" name="message" placeholder="Tell us about the car needing service(s)" maxlength="1000"></textarea>
+            </label>
+          </div>
+          <button class="recording__button btn" type="submit" value="Make an Appointment">
+            <span class="recording__span">Make an Appointment</span>
+            <svg width="43" height="40" viewbox="0 0 43 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M43 40H0L16.7 0H43V40Z" fill="#E30B0B"></path>
+              <path d="M27.0001 25.3333L26.0601 24.3933L29.7801 20.6667H21.6667V19.3333H29.7801L26.0601 15.6067L27.0001 14.6667L32.3334 20L27.0001 25.3333Z" fill="white"></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="recording__right">
+      <h3 class="recording__h3-white h3">Maxime placeat facere possimus omnis </h3>
+      <h2 class="recording__h2 h2">17k</h2>
+      <h4 class="recording__h4 h4">customers served (and counting)</h4>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,193 @@
+@import "mixins/breakpoint.scss";
+
+/*** Услуги services-1440px***/
+.services {
+  padding: 101px 0 174px;
+  background-color: var(--color-tangaroa);
+
+  &__container {
+    position: relative;
+  }
+
+  &__container::before {
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: 61px;
+    width: 86%;
+    height: 172%;
+    background-image: url(../img/picture-transparent-big.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    margin-bottom: 28px;
+    color: var(--color-white);
+  }
+
+  &__title {
+    margin-top: 0;
+    width: 410px;
+    color: var(--color-white);
+  }
+
+  &__img {
+    margin-top: -181px;
+    width: 498px;
+    height: 315px;
+    background-image: url("../img/services-auto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    gap: 6px;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__image {
+    margin-right: 11px;
+  }
+
+  &__block {
+    padding-top: 4px;
+  }
+
+  &__title-icon {
+    margin: 0;
+    margin-bottom: 3px;
+    color: var(--color-milanoRed);
+  }
+
+  &__desc {
+    margin: 0;
+    max-width: 127px;
+    color: var(--color-wildSand);
+  }
+}
+/*** // Услуги services-1440px***/
+
+
+
+/*** Услуги services-1024px***/
+@include desktop {
+  .services {
+    padding: 70px 0;
+
+    &__container::before {
+      top: -20px;
+      left: 11px;
+      width: 76%;
+      height: 113%;
+    }  
+
+    &__top {
+      margin-bottom: 20px;
+    }
+
+    &__img {
+      margin-top: -111px;
+      width: 383px;
+      height: 200px;
+    }
+
+    &__image img {
+      width: 56px;
+      height: 56px;
+    }
+
+    &__title-icon {
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    &__desc {
+      max-width: 100%;
+      font-size: 14px;
+    }
+  }
+}
+/*** // Услуги services-10240px***/
+
+
+
+/*** Услуги services-757px***/
+@include tablet {
+  .services {
+    padding: 50px 0;
+
+    &__container::before {
+      top: 80px;
+      left: 80px;
+      width: 56%;
+      height: 73%;
+    }
+
+    &__title {
+      width: 100%;
+    }
+
+    &__block {
+      margin-top: -6px;
+      padding-top: 0;    
+    }
+
+    &__img {
+      display: none;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 50%);
+      gap: 30px 20px;
+    }
+  }
+}
+/*** // Услуги services-757px***/
+
+
+
+/*** Услуги services-434px***/
+@include mobile {
+  .services {
+    padding: 30px 0;
+
+    &__container::before {
+      top: 20%;
+      left: 20%;
+      width: 60%;
+      height: 65%;
+    }
+
+    &__subtitle {
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      gap: 25px 5px;
+    }
+
+    &__image img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+/*** // Услуги services-434px***/
