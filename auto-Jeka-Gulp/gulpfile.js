@@ -67,7 +67,7 @@ const scripts = () => {
 			module: {
 				rules: [{
 					test: /\.m?js$/,
-					exclude: /(node_modules|bower_components)/,
+					exclude: /(node_modules|bower_components)/, //он исключает эту папку, так что ее постоянно удалять не надо, она не зальется на гитхаб
 					use: {
 						loader: 'babel-loader',
 						options: {
