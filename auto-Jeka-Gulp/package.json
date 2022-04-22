@@ -11,7 +11,7 @@
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
-    "babel-loader": "^8.2.4",
+    "babel-loader": "^8.2.5",
     "browser-sync": "^2.27.9",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -35,8 +35,12 @@
     "gulp-uglify-es": "^3.0.0",
     "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
-    "just-validate": "^3.5.1",
+    "jquery-ui": "^1.13.1",
+    "just-validate": "^3.5.2",
     "node-sass": "^7.0.1",
-    "normalize-scss": "^7.0.1"
-  }
+    "normalize-scss": "^7.0.1",
+    "webpack": "^5.72.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {}
 }

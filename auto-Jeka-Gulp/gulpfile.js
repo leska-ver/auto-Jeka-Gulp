@@ -38,7 +38,7 @@ const clean = () => {
   return del(['dist/*'])
 }
 
-//sourcemap, rename, autoprefixer, cleanCSS, browser-sync 
+//sourcemap, rename, autoprefixer, cleanCSS, browser-sync +
 const styles = () => {
   return src('./src/scss/main.scss')
     .pipe(sourcemaps.init()) 
@@ -67,7 +67,7 @@ const scripts = () => {
 			module: {
 				rules: [{
 					test: /\.m?js$/,
-					exclude: /(node_modules|bower_components)/, //он исключает эту папку, так что ее постоянно удалять не надо, она не зальется на гитхаб
+					exclude: /(node_modules|bower_components)/, //он исключает эту папку, она не зальется на гитхаб
 					use: {
 						loader: 'babel-loader',
 						options: {
@@ -85,7 +85,7 @@ const scripts = () => {
 		}))
 		.on('error', function (err) {
 			console.error('WEBPACK ERROR', err);
-			this.emit('end'); // Не останавливайте остальную часть задачи
+			this.emit('end'); // Don't stop the rest of the task
 		})
 
 		.pipe(sourcemaps.init())
@@ -94,6 +94,8 @@ const scripts = () => {
 		.pipe(dest('./dist/js'))
 		.pipe(browserSync.stream());
 }
+
+
 
 const htmlInclude = () => {
   return src(['./src/index.html'])
@@ -105,16 +107,22 @@ const htmlInclude = () => {
   .pipe(browserSync.stream());
 }
 
+
+
 const imgToApp = () => { 
   return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg'])
   .pipe(imagemin([imagemin.mozjpeg(), imagemin.optipng(), imagemin.svgo()]))
   .pipe(dest('./dist/img'))
 }
 
+
+
 const fonts = () => {
   return src(['./src/fonts/*.woff2', './src/fonts/*.woff'])
   .pipe(dest('./dist/fonts'))
 }
+
+
 
 const watchFiles = () => {
   browserSync.init({
@@ -137,6 +145,8 @@ exports.watchFiles = watchFiles;
 exports.fileinclude = htmlInclude;
 
 
+
+
 // Таски с Build
 const stylesBuild = () => {
 	return src('./src/scss/**/*.scss')
@@ -155,7 +165,9 @@ const stylesBuild = () => {
 		.pipe(dest('./dist/css/'))
 }
 
-/*WEBPACK с Build*/
+
+
+/*WEBPACK с Build +*/
 const scriptsBuild = () => {
 	return src('./src/js/main.js')
 		.pipe(webpackStream({
@@ -166,7 +178,7 @@ const scriptsBuild = () => {
 			module: {
 				rules: [{
 					test: /\.m?js$/,
-					exclude: /(node_modules|bower_components)/,
+					exclude: /(node_modules|bower_components)/,//он исключает эту папку, она не зальется на гитхаб
 					use: {
 						loader: 'babel-loader',
 						options: {
@@ -186,6 +198,10 @@ const scriptsBuild = () => {
 		.pipe(dest('./dist/js'))
 		.pipe(browserSync.stream());
 }
+
+
+
+
 
 exports.dev = series(clean, htmlInclude, styles, scripts, fonts, imgToApp, svgSprites, watchFiles);
 exports.build = series(clean, htmlInclude, stylesBuild, scriptsBuild, fonts, imgToApp, svgSprites);
