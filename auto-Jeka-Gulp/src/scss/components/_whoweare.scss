@@ -61,7 +61,7 @@
 
 /***Фото whoweare-1024px***/
 @include desktop {
-  .whoweare__container {
+  &__container {
     padding-top: 70px;
 
     &__container::before {

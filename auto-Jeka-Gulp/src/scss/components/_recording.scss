@@ -64,13 +64,13 @@
     margin-bottom: 21px;
   }
 
-/*Для формы отправки*/
-.form__label {
-  position: relative;
-  display: flex;
-  margin-bottom: 20px;
-}
-/* // Для формы отправки*/
+  /*Для формы отправки*/
+  .form__label {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  /* // Для формы отправки*/
 
   &__input {
     padding: 16px 27px 12px;
@@ -92,11 +92,11 @@
     position: relative;
   }
 
-.js-validate-error-label {
-  position: absolute;
-  top: -17px;
-  left: 3px;  
-}
+  .js-validate-error-label {
+    position: absolute;
+    top: -17px;
+    left: 3px;  
+  }
   /***Конец стилазация фразы ошибки***/
 
   &__textarea {
@@ -118,7 +118,7 @@
 
   &__button {
     margin-left: auto;
-  
+
     &:focus {
       outline: 1px solid var(--color-tangaroa);
     }
@@ -169,7 +169,7 @@
 @include desktop {
   .recording {
     padding-bottom: 97px;
-  
+
     &::before, &::after {
       width: 541px;
       height: 350px;
@@ -193,7 +193,7 @@
 
     &__right {
       padding: 0 30px;
-    }
+    } 
   } 
 }
 /*** // Форма регистрация recording-10240px***/
@@ -204,7 +204,7 @@
 @include tablet {
   .recording {
     padding-bottom: 80px;
-  
+
     &::before, &::after {
       width: 479px;
       height: 280px;
@@ -291,10 +291,10 @@
     &__button {
       justify-content: center;
       width: 100%;
-    }
 
-    &__button svg {
-      margin-left: auto;
+      & svg {
+        margin-left: auto;
+      }
     }
   }
 }

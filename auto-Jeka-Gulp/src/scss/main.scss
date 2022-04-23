@@ -1,5 +1,6 @@
 // базовые подключения
 @import "../../node_modules/normalize-scss/sass/normalize";
+// @import "just-validate";
 @include normalize(); 
 @import "vars";
 @import "mixins";
