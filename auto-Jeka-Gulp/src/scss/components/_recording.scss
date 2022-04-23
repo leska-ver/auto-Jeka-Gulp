@@ -77,10 +77,10 @@
     border: 1px solid transparent;
     width: 100%;
     background-color: var(--color-wildSand);    
-  }
 
-  &__input:focus {
-    outline: none;
+    &:focus {
+      outline: none;
+    }
   }
 
   &__form-label {
@@ -110,10 +110,10 @@
     color: var(--color-dustyGray);
     background-color: var(--color-wildSand);
     overflow: hidden;
-  }
 
-  &__textarea:focus {
-    outline: 1px solid var(--color-dustyGray);
+    &:focus {
+      outline: 1px solid var(--color-dustyGray);
+    }
   }
 
   &__button {
@@ -194,7 +194,7 @@
     &__right {
       padding: 0 30px;
     } 
-  } 
+  }
 }
 /*** // Форма регистрация recording-10240px***/
 

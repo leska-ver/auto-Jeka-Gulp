@@ -1370,10 +1370,6 @@ button {
 }
 
 .whoweare__text {
-  margin-bottom: 58px;
-}
-
-.whoweare__text {
   margin: 0 0 59px 0;
   font-size: 16px;
   line-height: 24px;
@@ -1392,7 +1388,11 @@ button {
 /***Фото whoweare-1024px***/
 @media (max-width: 1024px) {
   __container {
+    margin-top: 0;
+    /*Для subМеню*/
     padding-top: 70px;
+    z-index: -1;
+    /*Для subМеню*/
   }
   __container__container::before {
     width: 540px;
@@ -1446,10 +1446,10 @@ button {
     width: 400px;
     height: 210px;
   }
-  .whoweare__text {
+  .whoweare .whoweare__text {
     margin: 0 0 30px 0;
   }
-  .whoweare__image {
+  .whoweare .whoweare__image {
     margin: 0 0 -30px 0;
   }
 }
@@ -2030,289 +2030,12 @@ button {
 
 /*** // Форма регистрация recording-434px***/
 /*** Картинка и ТАБ gallery-1440px***/
-.gallery {
-  position: relative;
-  padding: 0 0 236px 0;
-  /*Табы - Каталок фотографий*/
-  /* -//- Табы - Каталок фотографий*/
-}
-
-.gallery::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 640px;
-  height: 450px;
-  background-image: url(../img/picture-transparent-3.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom;
-}
-
-.gallery__container {
-  margin: 0 auto;
-  margin-top: -79px;
-  padding: 94px 87px 0 87px;
-  border: 1px solid transparent;
-  max-width: 1020px;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  background-color: var(--color-white);
-}
-
-.gallery .gallery__subtitle {
-  margin: 0 0 28px 0;
-}
-
-.gallery .gallery__title {
-  margin: 0 0 57px 0;
-  max-width: 583px;
-}
-
-.gallery .gallery__list {
-  display: flex;
-  margin: 0 0 50px;
-  padding: 0 0 0 4px;
-  border-bottom: 1px solid gray;
-}
-
-.gallery .gallery__item {
-  position: relative;
-}
-
-.gallery .gallery__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.gallery .gallery__button {
-  position: relative;
-  padding: 0 37px 15px;
-  border-bottom: 3px solid transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  transition: color .4s ease-in-out;
-}
-
-.gallery .gallery__button::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 2px;
-  width: 100%;
-  border: 3px solid transparent;
-  color: var(--color-milanoRed);
-}
-
-.gallery .gallery__button:focus {
-  color: var(--color-milanoRed);
-  outline: none;
-}
-
-.gallery .gallery__button:hover {
-  color: var(--color-mineShaft);
-}
-
-.gallery .gallery__button:active {
-  color: var(--color-amethyst);
-}
-
-.gallery .is-active.gallery__button::after {
-  border-bottom: 3px solid var(--color-milanoRed);
-}
-
-.gallery .is-active.gallery__button {
-  color: var(--color-milanoRed);
-}
-
-.gallery .gallery__on, .gallery .gallery__off {
-  content: "";
-  position: absolute;
-  top: -7px;
-  right: 26px;
-  width: 7px;
-  height: 7px;
-  border: 2px solid transparent;
-  border-radius: 50%;
-}
-
-.gallery .gallery__on {
-  /*Зелённый*/
-  background-color: var(--color-malachite);
-}
-
-.gallery .gallery__off {
-  /*Серый*/
-  background-color: var(--color-alto);
-  z-index: 1;
-}
-
-.gallery .gallery__bay {
-  position: relative;
-  margin-bottom: -120px;
-}
-
-.gallery .gallery__bay.tab-content {
-  display: none;
-}
-
-.gallery .gallery__bay.tab-content-active {
-  display: block;
-}
-
-.gallery .gallery__bay-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.gallery .gallery__bay-img {
-  padding: 0;
-}
-
-.gallery .gallery__bay_video iframe {
-  border: 1px solid transparent;
-  width: 100%;
-  height: 315px;
-}
-
-.gallery .gallery__span {
-  position: absolute;
-  top: 31px;
-  right: 32px;
-  padding: 1.5px 9px;
-  border: 1px solid var(--color-malachite);
-  color: var(--color-white);
-  background-color: var(--color-malachite);
-  transition: .5s;
-  cursor: pointer;
-}
-
-.gallery .gallery__span:hover {
-  -webkit-transform: scale(1.2);
-  -ms-ransform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.gallery .gallery__span:active {
-  border: 1px solid var(--color-tangaroa);
-}
-
-.gallery .gallery__button-hide {
-  display: none;
-}
-
 /*** // Картинка и ТАБ gallery-1440px***/
 /*** Картинка и ТАБ gallery-1024px***/
-@media (max-width: 1024px) {
-  .gallery {
-    padding: 70px 0 0;
-    background-color: var(--color-white);
-  }
-  .gallery::before {
-    width: 35%;
-    height: 40%;
-  }
-  .gallery__container {
-    margin-top: 0;
-    max-width: 1120px;
-    background-color: transparent;
-  }
-  .gallery__list {
-    margin: 0 0 45px;
-    justify-content: space-between;
-  }
-  .gallery__item:not(:last-child) {
-    margin-right: 0;
-  }
-  .gallery__button {
-    padding: 0 17px 15px;
-  }
-  .gallery__button_green::before, .gallery__button_gray::before {
-    right: 7px;
-  }
-  .gallery__bay {
-    margin-bottom: -60px;
-  }
-  .gallery__bay-imgWidth {
-    width: 100%;
-  }
-  .gallery__bay-grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 20px;
-  }
-}
-
 /*** // Картинка и ТАБ gallery-10240px***/
 /*** Картинка и ТАБ gallery-757px***/
-@media (max-width: 757px) {
-  .gallery {
-    padding: 40px 0 0;
-    background-color: var(--color-white);
-  }
-  .gallery__subtitle {
-    margin: 0 0 20px 0;
-  }
-  .gallery__title {
-    margin: 0 0 27px 0;
-    max-width: 100%;
-    font-size: 33px;
-    line-height: 39px;
-  }
-  .gallery__list {
-    display: block;
-    margin: 0 0 15px;
-    border-bottom: none;
-  }
-  .gallery .is-active.gallery__button::after {
-    border-bottom: 3px solid transparent;
-  }
-  .gallery__bay-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-  }
-}
-
 /*** // Картинка и ТАБ gallery-757px***/
 /*** Картинка и ТАБ gallery-434px***/
-@media (max-width: 434px) {
-  .gallery {
-    padding: 40px 0 0;
-    background-color: var(--color-white);
-    /* // Скрываем часть услуг*/
-  }
-  .gallery__bay {
-    /*Скрываем часть услуг*/
-  }
-  .gallery__bay-grid {
-    display: block;
-  }
-  .gallery__bay-img {
-    display: none;
-    margin-bottom: 20px;
-  }
-  .gallery__bay-img:nth-child(-n+1) {
-    display: block;
-  }
-  .gallery .full .gallery__bay-img {
-    display: block;
-  }
-  .gallery__button-hide {
-    display: block;
-    border: 1px solid transparent;
-    background-color: transparent;
-    cursor: pointer;
-    transition: border .4s ease-in-out;
-  }
-  .gallery__button-hide:hover {
-    border: 1px solid var(--color-mineShaft);
-  }
-}
-
 /*** Отзывы клиентов feedback-1440px***/
 .feedback {
   padding-bottom: 211px;

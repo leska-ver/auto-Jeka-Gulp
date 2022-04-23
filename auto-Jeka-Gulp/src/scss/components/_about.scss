@@ -36,18 +36,18 @@
       height: 67px;
       background-size: cover;
       background-repeat: no-repeat;
-    }
 
-    &-img_1 {
-      background-image: url("../img/card-1.png");
-    }
+      &_1 {
+        background-image: url("../img/card-1.png");
+      }
 
-    &-img_2 {
-      background-image: url("../img/card-2.png");
-    }
+      &_2 {
+        background-image: url("../img/card-2.png");
+      }
 
-    &-img_3 {
-      background-image: url("../img/card-3.png");
+      &_3 {
+        background-image: url("../img/card-3.png");
+      }
     }
 
     &-h4 {
@@ -64,126 +64,126 @@
   &__bottom {
     position: relative;
     padding: 99px 0 0;
-  }
 
-  &__bottom::before {
-    top: 0;
-    left: 0;
-    width: 640px;
-    background-image: url("../img/picture-transparent-2.png");  
-    background-position: left;
-  }
+    &::before {
+      top: 0;
+      left: 0;
+      width: 640px;
+      background-image: url("../img/picture-transparent-2.png");  
+      background-position: left;
+    }
 
-  &__bottom::before, &__bottom::after {
-    content: '';
-    position: absolute;
-    height: 445px;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      height: 445px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
 
-  &__bottom::after {  
-    right: 0;
-    bottom: -128px;
-    width: 646px;  
-    background-image: url("../img/picture-transparent-3.png");
-    background-position: bottom;
-  }
+    &::after {  
+      right: 0;
+      bottom: -128px;
+      width: 646px;  
+      background-image: url("../img/picture-transparent-3.png");
+      background-position: bottom;
+    }
 
-  &__bottom-list {
-    margin-bottom: 45px;
-    padding: 0 0 0 12px;
-  }
+    &-list {
+      margin-bottom: 45px;
+      padding: 0 0 0 12px;
+    }
 
-  &__bottom-item {
-    margin-right: 20px;  
-    margin-bottom: 25px;
-    padding: 50px 49px 34px;
-    width: 31.7%;
-    background-color: var(--color-white);  
-    z-index: 5;/*Для картинки png*/ 
-    -webkit-transition: box-shadow .4s ease-in-out; 
-    -moz-transition: box-shadow .4s ease-in-out; 
-    -ms-transition: box-shadow .4s ease-in-out; 
-    -o-transition: box-shadow .4s ease-in-out; 
-    transition: box-shadow .4s ease-in-out; 
-  }
+    &-item {
+      margin-right: 20px;  
+      margin-bottom: 25px;
+      padding: 50px 49px 34px;
+      width: 31.7%;
+      background-color: var(--color-white);  
+      z-index: 5;/*Для картинки png*/ 
+      -webkit-transition: box-shadow .4s ease-in-out; 
+      -moz-transition: box-shadow .4s ease-in-out; 
+      -ms-transition: box-shadow .4s ease-in-out; 
+      -o-transition: box-shadow .4s ease-in-out; 
+      transition: box-shadow .4s ease-in-out; 
 
-  &__bottom-item:nth-child(3n) {
-    margin-right: 0;
-  }
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
 
-  &__bottom-item:hover {
-    box-shadow: 0 8px 16px 0 rgba(38, 38, 38, 0.2);
-  }
+      &:hover {
+        box-shadow: 0 8px 16px 0 rgba(38, 38, 38, 0.2);
+      }
+    }
 
-  &__bottom-h3 {
-    margin-top: 26px;
-    margin-bottom: 79px;
-    font-size: 36.3px;
-  }
+    &-h3 {
+      margin-top: 26px;
+      margin-bottom: 79px;
+      font-size: 36.3px;
+    }
 
-  &__bottom-img {
-    margin: 0 auto;
-    width: 66px;
-    height: 67px;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+    &-img {
+      margin: 0 auto;
+      width: 66px;
+      height: 67px;
+      background-size: cover;
+      background-repeat: no-repeat;
 
-  &__bottom-img_4 {
-    background-image: url("../img/card-4.png");
-  }
+      &_4 {
+        background-image: url("../img/card-4.png");
+      }
 
-  &__bottom-img_5 {
-    background-image: url("../img/card-5.png");
-  }
+      &_5 {
+        background-image: url("../img/card-5.png");
+      }
 
-  &__bottom-img_6 {
-    background-image: url("../img/card-6.png");
-  }
+      &_6 {
+        background-image: url("../img/card-6.png");
+      }
 
-  &__bottom-img_7 {
-    background-image: url("../img/card-7.png");
-  }
+      &_7 {
+        background-image: url("../img/card-7.png");
+      }
 
-  &__bottom-img_8 {
-    background-image: url("../img/card-8.png");
-  }
+      &_8 {
+        background-image: url("../img/card-8.png");
+      }
 
-  &__bottom-img_9 {
-    background-image: url("../img/card-9.png");
-  }
+      &_9 {
+        background-image: url("../img/card-9.png");
+      }
+    }
 
-  &__bottom-h4 {
-    margin-top: 29px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
+    &-h4 {
+      margin-top: 29px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-  &__bottom-desc {
-    text-align: center;
-  }
+    &-desc {
+      text-align: center;
+    }
 
-  &__bottom-button {
-    margin: 0 auto;
-  }
+    &-button {
+      margin: 0 auto;
 
-  &__bottom-button:focus {
-    outline: 1px solid var(--color-tangaroa);
-  }
+      &:focus {
+        outline: 1px solid var(--color-tangaroa);
+      }
 
-  &__bottom-button:hover {
-    background-color: #d52828;
-  }
+      &:hover {
+        background-color: #d52828;
+      }
 
-  &__bottom-button:active {
-    background-color: #d00c0c;
-  }
+      &:active {
+        background-color: #d00c0c;
+      }
 
-  &__bottom-button svg {
-    margin-left: 5px;
-  }  
+      & svg {
+        margin-left: 5px;
+      }
+    }
+  }
 }
 /*** // О нас about-1440px***/
 
@@ -206,33 +206,33 @@
 
     &__bottom {
       padding: 70px 0 0;
+
+      &::before {
+        width: 540px;
+        height: 345px;
+      }  
+
+      &::after {
+        bottom: -73px;
+        width: 546px;
+        height: 345px;
+      }
+
+      &-list {
+        margin-bottom: 25px;
+        padding: 0;
+      }
+
+      &-item {
+        padding: 40px 30px 34px;
+        width: 47%;
+
+        &:nth-child(3n) {
+          margin-right: 20px;
+        }
+      }  
     }
-
-    &__bottom::before {
-      width: 540px;
-      height: 345px;
-    }  
-
-    &__bottom::after {
-      bottom: -73px;
-      width: 546px;
-      height: 345px;
-    }
-
-    &__bottom-list {
-      margin-bottom: 25px;
-      padding: 0;
-    }
-
-    &__bottom-item {
-      padding: 40px 30px 34px;
-      width: 47%;
-    }  
-
-    &__bottom-item:nth-child(3n) {
-      margin-right: 20px;
-    }  
-  } 
+  }
 }
 /*** // О нас about-1024px***/
 
@@ -334,6 +334,6 @@
     &__bottom-button svg {
       margin-left: auto;   
     } 
-  } 
+  }
 }
 /*** // О нас about-434px***/
