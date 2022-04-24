@@ -57,16 +57,16 @@
 
 /***Фото whoweare-1024px***/
 @include desktop {
-  &__container {
+  .whoweare__container {
     margin-top: 0;/*Для subМеню*/
     padding-top: 70px;
     z-index: -1;/*Для subМеню*/
-
-    &__container::before {
-      width: 540px;
-      height: 350px;
-    }  
   }
+
+  .whoweare__container::before {
+    width: 540px;
+    height: 350px;
+  }  
 }
 /*** // Фото whoweare-1024px***/
 
@@ -128,11 +128,11 @@
       }
     }
 
-    .whoweare__text {
+    &__text {
       margin: 0 0 30px 0;
     }
 
-    .whoweare__image {
+    &__image {
       margin: 0 0 -30px 0;
     }
   }

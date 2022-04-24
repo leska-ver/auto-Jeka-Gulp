@@ -2,7 +2,6 @@ import $ from "jquery";
 
 function autoJeka () {
 
-
   
   //--Меню(data-target) клик или is-open--is-active--//
   document.querySelectorAll(".header__center-item-btn_js").forEach(item => {

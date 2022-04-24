@@ -7,19 +7,19 @@
 
   &__container {
     position: relative;
-  }
 
-  &__container::before {
-    content: '';
-    position: absolute;
-    top: -70px;
-    left: 61px;
-    width: 86%;
-    height: 172%;
-    background-image: url(../img/picture-transparent-big.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -70px;
+      left: 61px;
+      width: 86%;
+      height: 172%;
+      background-image: url(../img/picture-transparent-big.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top;
+    }
   }
 
   &__top {

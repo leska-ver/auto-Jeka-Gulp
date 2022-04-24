@@ -3,7 +3,7 @@
 /*** Кнопка встречи conventus-1440px***/
 .conventus {
   padding: 20px 0 44px;
-
+  
   &__block-conventus {
     display: flex;
     justify-content: space-between;
@@ -45,12 +45,12 @@
 @include desktop {
   .conventus {
     padding: 20px 0;
-    
+
     &__block-conventus {
       margin-top: -57px;
       padding: 35px;
-    }
-  } 
+    } 
+  }
 }
 /*** // Кнопка встречи conventus-10240px***/
 
@@ -58,17 +58,15 @@
 
 /*** Кнопка встречи conventus-757px***/
 @include tablet {
-  .conventus {
-    &__block-conventus {
-      display: block;
-      margin-top: -40px;
-      padding: 25px;
-    }
+  .conventus__block-conventus {
+    display: block;
+    margin-top: -40px;
+    padding: 25px;
+  }
 
-    &__desc {
-      margin-bottom: 30px;
-      width: 100%;
-    }
+  .conventus__desc {
+    margin-bottom: 30px;
+    width: 100%;
   }
 }
 /*** // Кнопка встречи conventus-757px***/
@@ -77,19 +75,17 @@
 
 /*** Кнопка встречи conventus-434px***/
 @include mobile {
-  .conventus {
-    &__block-conventus {
-      margin-top: 0;
-    }
+  .conventus__block-conventus {
+    margin-top: 0;
+  }
 
-    &__button {
-      justify-content: center;
-      width: 100%;
-    }
+  .conventus__button {
+    justify-content: center;
+    width: 100%;
+  }
 
-    &__button svg {
-      margin-left: auto;
-    }
+  .conventus__button svg {
+    margin-left: auto;
   }
 }
 /*** // Кнопка встречи conventus-434px***/

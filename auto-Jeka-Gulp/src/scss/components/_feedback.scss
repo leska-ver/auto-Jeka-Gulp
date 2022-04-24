@@ -37,10 +37,10 @@
     bottom: 39px;
     display: inline-flex;
     align-items: center;
-  }
 
-  &__info img {
-    margin-right: 15px;
+    & img {
+      margin-right: 15px;
+    }
   }
 }
 /*** // Отзывы клиентов feedback-1440px***/

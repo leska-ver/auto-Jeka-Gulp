@@ -133,66 +133,66 @@
 
   &__right {
     margin-left: 47px;
+
+    &-desc {
+      margin-top: 14.5px;
+      margin-bottom: 28px;
+      color: var(--color-tundora);
+    }
+
+    &-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    &-item:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &-link {
+      display: grid;
+      grid-template-columns: 16px 188px;
+      gap: 20px;
+      outline: none;
+
+      & svg {
+        display: block;
+        cursor: pointer;
+      }
+
+      &:focus svg path {
+        fill: var(--color-tangaroa);
+      }
+    }
+
+    &-span {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--color-tundora);
+    }
   }
 
-  &__right-desc {
-    margin-top: 14.5px;
-    margin-bottom: 28px;
-    color: var(--color-tundora);
-  }
-
-  &__right-list {
-    margin: 0;
-    padding: 0;
-  }
-
-  &__right-item:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  &__right-link {
-    display: grid;
-    grid-template-columns: 16px 188px;
-    gap: 20px;
-    outline: none;
-  }
-
-  &__right-link svg {
-    display: block;
-    cursor: pointer;
-  }
-
-  &__right-link:focus svg path {
-    fill: var(--color-tangaroa);
-  }
-
-  &__right-span {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: var(--color-tundora);
+  &__container_bottom {
+      padding: 0 19px;
   }
 
   &__bottom {
     padding: 9px 0;
     background-color: var(--color-tangaroa);
-  }
 
-  &__container_bottom {
-    padding: 0 19px;
-  }
+    &-desc {
+      font-size: 12.2px;
+      line-height: 18px;
+      color: var(--color-dustyGray);
+    }
 
-  &__bottom-desc {
-    font-size: 12.2px;
-    line-height: 18px;
-    color: var(--color-dustyGray);
-  }
-
-  &__bottom-span {
-    margin: auto 0;
-    font-size: 12.7px;
-    line-height: 18px;
-    color: var(--color-dustyGray);
+    &-span {
+      margin: auto 0;
+      font-size: 12.7px;
+      line-height: 18px;
+      color: var(--color-dustyGray);
+    }
   }
 
   /* Стили для модального окна - footer__modal */
@@ -311,37 +311,37 @@
 @include desktop {
   .footer {
     padding: 35px 0 0;
-  }
 
-  &__top {
-    padding-bottom: 70px;
-  }
+    &__top {
+      padding-bottom: 70px;
+    }
 
-  &__container_grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: end;
-    gap: 50px;
-  }
+    &__container_grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: end;
+      gap: 50px;
+    }
 
-  &__item-icone:not(:last-child) {
-    margin-right: 10px;
-  }
+    &__item-icone:not(:last-child) {
+      margin-right: 10px;
+    }
 
-  &__link-icone:focus svg, &__link-icone:hover svg {
-    outline-offset: 2px;
-  }
+    &__link-icone:focus svg, &__link-icone:hover svg {
+      outline-offset: 2px;
+    }
 
-  &__right {
-    margin-left: 0;
-  }
+    &__right {
+      margin-left: 0;
 
-  &__right-item:not(:last-child) {
-    margin-bottom: 10px;
-  }
+      &-item:not(:last-child) {
+        margin-bottom: 10px;
+      }
 
-  &__right-link {
-    grid-template-columns: 16px 1fr;
-    gap: 10px;
+      &-link {
+        grid-template-columns: 16px 1fr;
+        gap: 10px;
+      }
+    }
   }
 }
 /*** // Подвал footer-10240px***/
@@ -352,56 +352,56 @@
 @include tablet {
   .footer {
     padding: 30px 0 0;
-  }
 
-  &__container_grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
+    &__container_grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-  &__left {
-    width: 350px;
-  }
+    &__left {
+      width: 350px;
+    }
 
-  &__desc {
-    margin-bottom: 20px;
-  }  
+    &__desc {
+      margin-bottom: 20px;
+    }  
 
-  &__center-block {
-    justify-content: start;
-  }
+    &__center-block {
+      justify-content: start;
+    }
 
-  &__center-list:not(:last-child) {
-    margin-right: 50px;
-  }
+    &__center-list:not(:last-child) {
+      margin-right: 50px;
+    }
 
-  &__center-desc, &__right-desc {
-    margin-bottom: 20px;
-  }
+    &__center-desc, &__right-desc {
+      margin-bottom: 20px;
+    }
 
-  &__container_bottom {
-    display: block;
-    justify-content: end;
-  }
+    &__container_bottom {
+      display: block;
+      justify-content: end;
+    }
 
-  &__bottom-desc {
-    margin-bottom: 25px;
-  }
+    &__bottom-desc {
+      margin-bottom: 25px;
+    }
 
-  &__bottom-span {
-    display: flex;
-    justify-content: end;
-  }
+    &__bottom-span {
+      display: flex;
+      justify-content: end;
+    }
 
-  &__modal {
-    padding: 20px;  
-    width: 400px;     
-  }
+    &__modal {
+      padding: 20px;  
+      width: 400px;     
+    }
 
-  &__map {
-    height: 260px;
+    &__map {
+      height: 260px;
+    }
   }
 }
 /*** // Подвал footer-757px***/
@@ -412,44 +412,44 @@
 @include mobile {
   .footer {
     padding: 15px 0 0;
-  }
 
-  &__center-desc, &__right-desc {
-    margin-bottom: 10px;
-  }
+    &__center-desc, &__right-desc {
+      margin-bottom: 10px;
+    }
 
-  &__center-block {
-    display: block;
-  }
+    &__center-block {
+      display: block;
+    }
 
-  &__center-list {
-    display: flex;
-  }
+    &__center-list {
+      display: flex;
+    }
 
-  &__center-list:not(:last-child) {
-    margin-right: 0;
-  }
+    &__center-list:not(:last-child) {
+      margin-right: 0;
+    }
 
-  &__center-item:not(:last-child) {
-    margin-right: 25px;
-  }
+    &__center-item:not(:last-child) {
+      margin-right: 25px;
+    }
 
-  &__bottom {
-    padding-bottom: 30px;
-  }
+    &__bottom {
+      padding-bottom: 30px;
+    }
 
-  &__modal {
-    width: 100%;     
-  }
+    &__modal {
+      width: 100%;  
 
-  &__modal-clock {
-    font-size: 22px;
-  }
+      &-clock {
+        font-size: 22px;
+      }
 
-  &__modal-title_weight {
-    margin: 25px auto;
-    padding: 2px;
-    width: 70%;    
-  }
+      &-title_weight {
+        margin: 25px auto;
+        padding: 2px;
+        width: 70%;    
+      }
+    }
+  }  
 }
 /*** // Подвал footer-434px***/

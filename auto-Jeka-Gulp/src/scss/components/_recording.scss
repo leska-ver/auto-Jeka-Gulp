@@ -64,14 +64,6 @@
     margin-bottom: 21px;
   }
 
-  /*Для формы отправки*/
-  .form__label {
-    position: relative;
-    display: flex;
-    margin-bottom: 20px;
-  }
-  /* // Для формы отправки*/
-
   &__input {
     padding: 16px 27px 12px;
     border: 1px solid transparent;
@@ -90,12 +82,6 @@
   /***Стилазация фразы ошибки***/
   &__label {/*общий*/
     position: relative;
-  }
-
-  .js-validate-error-label {
-    position: absolute;
-    top: -17px;
-    left: 3px;  
   }
   /***Конец стилазация фразы ошибки***/
 
@@ -160,6 +146,19 @@
     color: var(--color-white);
     text-align: center;
   }
+}
+/*Для формы отправки*/
+.form__label {
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+}
+/* // Для формы отправки*/
+
+.js-validate-error-label {
+  position: absolute;
+  top: -17px;
+  left: 3px;  
 }
 /*** // Форма регистрация recording-1440px***/
 
